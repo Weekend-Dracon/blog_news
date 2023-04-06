@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Delete article: {{ article.title }}
+{% endblock title %}
+
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+  <p class="text-center">
+      Do you really want to delete the article with name is {{ article.title }}?
+  </p>
+  <button class="btn btn-dark">Yes, Delete</button>
+</form>
+{% endblock content %}
